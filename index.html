@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            min-height: 100vh; /* Hace que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+            display: flex;
+            flex-direction: column; /* Aplica flexbox para que el cuerpo ocupe todo el espacio vertical disponible */
+        }
+
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #007BFF;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #007BFF;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .original-state{
+            color:rgb(31, 121, 121);
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clase de Iniciación a JavaScript para IMMUNE institue</h1>
+    </header>
+
+    <main>
+        <h2>Bienvenido a la Clase de Iniciación a JavaScript</h2>
+        <p>En esta clase aprenderás los conceptos básicos de JavaScript.</p>
+        <!-- Aquí puedes agregar contenido adicional según tus necesidades -->
+
+        <h3>Ejemplo de JavaScript:</h3>
+        <p id="demo">Haz clic en el botón para cambiar este párrafo.</p>
+        <button onclick="cambiarTexto()">Cambiar Texto</button>
+        <!-- Aquí puedes llamar a los scripts que hayamos hecho en la etiqueta script o en la hoja de JS -->
+
+        <script>
+            function cambiarTexto() {
+                const demoElement = document.getElementById("demo");
+                
+                    // Verificamos la clase actual del párrafo
+                    if (demoElement.classList.contains("original-state")) {
+                        demoElement.innerHTML = "¡Hola, mundo!";
+                        demoElement.classList.remove("original-state");
+                        demoElement.classList.add("changed-state");
+                    } else {
+                        demoElement.innerHTML = "Haz clic en el botón para cambiar este párrafo.";
+                        demoElement.classList.remove("changed-state");
+                        demoElement.classList.add("original-state");
+                    }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Daniel Fenoll</p>
+    </footer>
+</body>
+</html>
